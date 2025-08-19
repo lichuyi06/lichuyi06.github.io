@@ -229,13 +229,145 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2025/08/10/form%E8%A1%A8%E5%8D%95%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84%E9%97%AE%E9%A2%98/" target="_self">
-          
+        <a href="/2025/08/19/%E5%8E%9F%E5%9E%8B%EF%BC%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/" target="_self">
+          &#39;原型，原型链&#39;
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2025/08/10/form%E8%A1%A8%E5%8D%95%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84%E9%97%AE%E9%A2%98/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/08/19/%E5%8E%9F%E5%9E%8B%EF%BC%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/" target="_self">
+        <div>
+          new, 原型，原型链1.New的原理当我们使用 new 关键字调用一个函数时，JavaScript 会执行以下步骤：  创建一个新的空对象 obj。将 obj.proto 指向 Foo.prototype，并绑定this。（实例才能通过原型链访问构造函数上挂载的方法和属性）。执行 执行构造函数代码。返回新对象。  new 关键词执行之后总是会返回一个对象，要么是实例对象，要么是 return 语
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-08-19 21:36" pubdate>
+              2025-08-19
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/08/19/%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E5%B0%8F%E7%9F%A5%E8%AF%86/" target="_self">
+          &#39;开发中的小知识&#39;
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/08/19/%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E5%B0%8F%E7%9F%A5%E8%AF%86/" target="_self">
+        <div>
+          开发中常用的小知识1.依赖相关有时经常会遇到之前的代码是正常的，但是未做任何修改，等段时间发现封装的组件出现bug，而官方文档没有这种情况说明，包括issue也为出现。可以考虑清理一下依赖包，我就踩过几次坑。我使用的是pnpm，如果是别的包管理器，替换掉即可。 1234Remove-Item -Recurse -Force node_modules, pnpm-lock.yaml   // 清理包
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-08-19 21:28" pubdate>
+              2025-08-19
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/08/19/%E5%87%BD%E6%95%B0%E6%9F%AF%E9%87%8C%E5%8C%96/" target="_self">
+          &#39;函数柯里化&#39;
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/08/19/%E5%87%BD%E6%95%B0%E6%9F%AF%E9%87%8C%E5%8C%96/" target="_self">
+        <div>
+          函数柯里化1.定义把一个接受多个参数的函数，转化为一系列接受单一参数的函数，并且返回新函数的技术。 12345678910111213function add(a, b, c) &#123;  return a + b + c&#125;function curryAdd(a) &#123;  return function (b) &#123;    return function (c) &#
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-08-19 21:28" pubdate>
+              2025-08-19
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/08/19/call-apply-bind%E5%87%BD%E6%95%B0/" target="_self">
+          &#39;call,apply,bind函数&#39;
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/08/19/call-apply-bind%E5%87%BD%E6%95%B0/" target="_self">
+        <div>
+          call，apply，bind 函数 以上三个函数都是用来操作js中 this指向的三种方法，核心都是 改变函数内部的 this 指向，区别在于调用方式和返回值。     方法 功能 返回值 参数形式    call 立即调用函数，并指定 this 函数执行结果 参数以逗号分隔传入   apply 立即调用函数，并指定 this 函数执行结果 参数以数组形式传入   bind 返回新函数，绑定 t
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-08-19 21:27" pubdate>
+              2025-08-19
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/08/16/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3js/" target="_self">
+          深入了解js
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/08/16/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3js/" target="_self">
         <div>
           
         </div>
@@ -245,8 +377,41 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2025-08-10 19:11" pubdate>
-              2025-08-10
+            <time datetime="2025-08-16 15:31" pubdate>
+              2025-08-16
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/08/12/Promise/" target="_self">
+          
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/08/12/Promise/" target="_self">
+        <div>
+          Promise1.概述Promise是JavaScript中用于处理异步操作的一种方式。它提供了一种简洁且强大的方法来处理异步代码，避免了方法回调。本文将详细讲解如何从零开始手写一个Promise，帮助您深入理解其工作原理。 Promise有三种状态： Pending（待定）：初始状态，既不是成功也不是失败。Fulfilled（已兑现）：表示异步操作成功完成，并返回了一个成功值。Rejected（
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-08-12 22:34" pubdate>
+              2025-08-12
             </time>
           </div>
         
@@ -263,7 +428,7 @@
       <h2 class="index-header">
         
         <a href="/2025/08/10/vue3%E4%B8%AD%E4%BD%BF%E7%94%A8element-Plus%E9%81%87%E8%A7%81%E7%9A%84%E9%97%AE%E9%A2%98/" target="_self">
-          form表单中常见的问题
+          vue3+element-Plus遇见的问题
         </a>
       </h2>
 
@@ -295,67 +460,6 @@
       <span class="category-chain">
         
   <a href="/categories/Vue-element-plus/" class="category-chain-item">Vue element-plus</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E5%89%8D%E7%AB%AF/">#前端</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2025/07/22/test/" target="_self">
-          test
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2025/07/22/test/" target="_self">
-        <div>
-          测试文章 dwwdqwwq
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2025-07-22 22:35" pubdate>
-              2025-07-22
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Vue/" class="category-chain-item">Vue</a>
   
   
 

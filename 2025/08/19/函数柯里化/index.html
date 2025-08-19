@@ -19,22 +19,21 @@
   <meta name="author" content="zhouwei">
   <meta name="keywords" content="">
   
-    <meta name="description" content="form表单中常见的问题resetField 重置表单1 问题复现：假设现在定义了一下表单数据 12345678910const ruleForm &#x3D; ref&lt;userInfoResult&gt;(&#123;  id: null,  name: &#x27;&#x27;,  gender: null,  employeeNumber: &#x27;&#x27;,  departmentId">
+    <meta name="description" content="函数柯里化1.定义把一个接受多个参数的函数，转化为一系列接受单一参数的函数，并且返回新函数的技术。 12345678910111213function add(a, b, c) &#123;  return a + b + c&#125;function curryAdd(a) &#123;  return function (b) &#123;    return function (c) &amp;#">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue3+element-Plus遇见的问题">
-<meta property="og:url" content="http://example.com/2025/08/10/vue3%E4%B8%AD%E4%BD%BF%E7%94%A8element-Plus%E9%81%87%E8%A7%81%E7%9A%84%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:title" content="&#39;函数柯里化&#39;">
+<meta property="og:url" content="http://example.com/2025/08/19/%E5%87%BD%E6%95%B0%E6%9F%AF%E9%87%8C%E5%8C%96/index.html">
 <meta property="og:site_name" content="lichuyi">
-<meta property="og:description" content="form表单中常见的问题resetField 重置表单1 问题复现：假设现在定义了一下表单数据 12345678910const ruleForm &#x3D; ref&lt;userInfoResult&gt;(&#123;  id: null,  name: &#x27;&#x27;,  gender: null,  employeeNumber: &#x27;&#x27;,  departmentId">
+<meta property="og:description" content="函数柯里化1.定义把一个接受多个参数的函数，转化为一系列接受单一参数的函数，并且返回新函数的技术。 12345678910111213function add(a, b, c) &#123;  return a + b + c&#125;function curryAdd(a) &#123;  return function (b) &#123;    return function (c) &amp;#">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-08-10T10:58:26.000Z">
-<meta property="article:modified_time" content="2025-08-10T11:36:37.764Z">
+<meta property="article:published_time" content="2025-08-19T13:28:04.000Z">
+<meta property="article:modified_time" content="2025-08-19T13:28:04.000Z">
 <meta property="article:author" content="zhouwei">
-<meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>vue3+element-Plus遇见的问题 - lichuyi</title>
+  <title>&#39;函数柯里化&#39; - lichuyi</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="vue3+element-Plus遇见的问题"></span>
+            <span id="subtitle" data-typed-text="&#39;函数柯里化&#39;"></span>
           
         </div>
 
@@ -211,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-08-10 18:58" pubdate>
-          2025年8月10日 晚上
+        <time datetime="2025-08-19 21:28" pubdate>
+          2025年8月19日 晚上
         </time>
       </span>
     
@@ -224,7 +223,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          198 字
+          287 字
         
       </span>
     
@@ -236,7 +235,7 @@
         
         
           <!-- compatible with older versions-->
-          2 分钟
+          3 分钟
         
       </span>
     
@@ -282,28 +281,62 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">vue3+element-Plus遇见的问题</h1>
-            
-              <p id="updated-time" class="note note-info" style="display: none">
-                
-                  
-                    本文最后更新于 2025-08-10T19:36:37+08:00
-                  
-                  
-
-                
-              </p>
+            <h1 id="seo-header">&#39;函数柯里化&#39;</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="form表单中常见的问题"><a href="#form表单中常见的问题" class="headerlink" title="form表单中常见的问题"></a>form表单中常见的问题</h1><h2 id="resetField-重置表单"><a href="#resetField-重置表单" class="headerlink" title="resetField 重置表单"></a>resetField 重置表单</h2><p>1 问题复现：假设现在定义了一下表单数据</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> ruleForm = ref&lt;userInfoResult&gt;(&#123;<br>  <span class="hljs-attr">id</span>: <span class="hljs-literal">null</span>,<br>  <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;&#x27;</span>,<br>  <span class="hljs-attr">gender</span>: <span class="hljs-literal">null</span>,<br>  <span class="hljs-attr">employeeNumber</span>: <span class="hljs-string">&#x27;&#x27;</span>,<br>  <span class="hljs-attr">departmentId</span>: <span class="hljs-literal">null</span>,<br>  <span class="hljs-attr">permissionLevel</span>: <span class="hljs-literal">null</span>,<br>  <span class="hljs-attr">roles</span>: [],<br>  <span class="hljs-attr">permissions</span>: [],<br>&#125;)<br></code></pre></td></tr></table></figure>
+                <h1 id="函数柯里化"><a href="#函数柯里化" class="headerlink" title="函数柯里化"></a>函数柯里化</h1><h2 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h2><p><strong>把一个接受多个参数的函数，转化为一系列接受单一参数的函数</strong>，并且返回新函数的技术。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">function</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">a, b, c</span>) &#123;<br>  <span class="hljs-keyword">return</span> a + b + c<br>&#125;<br><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">curryAdd</span>(<span class="hljs-params">a</span>) &#123;<br>  <span class="hljs-keyword">return</span> <span class="hljs-keyword">function</span> (<span class="hljs-params">b</span>) &#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-keyword">function</span> (<span class="hljs-params">c</span>) &#123;<br>      <span class="hljs-keyword">return</span> a + b + c<br>    &#125;<br>  &#125;<br>&#125;<br><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">curryAdd</span>(<span class="hljs-number">1</span>)(<span class="hljs-number">2</span>)(<span class="hljs-number">3</span>)) <span class="hljs-comment">// 6</span><br></code></pre></td></tr></table></figure>
 
-<p>在操作完后使用resetField()方法重置，导致某一项id字段未清除， 往往是因为具体的item项上的prop为绑定，</p>
-<p>请注意，这里有个坑，方法重置的是<strong>初始值</strong>，如果你在onMounted里面设置为表单设置初始值，比如ruleForm.value &#x3D; res， 这时候再使用resetField()数据并不会被重置，因为这时候初始值已经被替换掉了， 应该使用nextick，等DOM更新完毕在设置数据的值，这个时候既可正确清除。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-title function_">nextTick</span>(<span class="hljs-function">() =&gt;</span> &#123;<br>  <span class="hljs-title class_">Object</span>.<span class="hljs-title function_">assign</span>(ruleForm.<span class="hljs-property">value</span>, item)<br>&#125;)<br></code></pre></td></tr></table></figure>
+<h2 id="2-好处"><a href="#2-好处" class="headerlink" title="2.好处"></a>2.好处</h2><p>1：参数复用（减少重复传参）</p>
+<p>2：延迟执行（惰性计算）。柯里化的函数不会立即执行，直到最后一个参数传入才会真正计算。</p>
+<p>3：组合函数更方便</p>
+<h2 id="3-经典面试题"><a href="#3-经典面试题" class="headerlink" title="3.经典面试题"></a>3.经典面试题</h2><blockquote>
+<p>实现一个函数，使得满足以下几个要求：</p>
+<p>add(1)(2)(3)(4)&#x2F;&#x2F;输出10</p>
+<p>add(1,2)(3)(4)&#x2F;&#x2F;也输出10</p>
+<p>add(1)(2,3)(4)&#x2F;&#x2F;也输出10</p>
+</blockquote>
+<p>分析： 1 参数不固定 -&gt; … 或者 arguments 来接收。 </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">function</span> <span class="hljs-title function_">sum</span>(<span class="hljs-params">...args</span>)&#123;<br>	<span class="hljs-keyword">let</span> allArgs = []<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
 
+
+
+<h3 id="arguments-vs-…args-区别总结"><a href="#arguments-vs-…args-区别总结" class="headerlink" title="arguments vs …args 区别总结"></a>arguments vs …args 区别总结</h3><table>
+<thead>
+<tr>
+<th>特性</th>
+<th><code>arguments</code></th>
+<th><code>...args</code> (剩余参数)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>类型</td>
+<td>类数组对象（不是真数组）</td>
+<td>真数组</td>
+</tr>
+<tr>
+<td>箭头函数可用？</td>
+<td>❌ 不可用</td>
+<td>✅ 可用</td>
+</tr>
+<tr>
+<td>取名</td>
+<td>固定是 <code>arguments</code></td>
+<td>可以自定义（如 <code>...args</code>、<code>...rest</code>）</td>
+</tr>
+<tr>
+<td>语义</td>
+<td>函数调用时的所有实参</td>
+<td>未被命名的剩余参数</td>
+</tr>
+<tr>
+<td>ES 版本</td>
+<td>ES3 就有</td>
+<td>ES6 引入</td>
+</tr>
+</tbody></table>
 
                 
               </div>
@@ -312,34 +345,6 @@
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Vue-element-plus/" class="category-chain-item">Vue element-plus</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/%E5%89%8D%E7%AB%AF/" class="print-no-link">#前端</a>
-      
-    </div>
   
 </div>
 
@@ -349,8 +354,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>vue3+element-Plus遇见的问题</div>
-      <div>http://example.com/2025/08/10/vue3中使用element-Plus遇见的问题/</div>
+      <div>&#39;函数柯里化&#39;</div>
+      <div>http://example.com/2025/08/19/函数柯里化/</div>
     </div>
     <div class="license-meta">
       
@@ -362,7 +367,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年8月10日</div>
+          <div>2025年8月19日</div>
         </div>
       
       
@@ -394,9 +399,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/08/12/Promise/" title="">
+                      <a href="/2025/08/19/%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E5%B0%8F%E7%9F%A5%E8%AF%86/" title="&#39;开发中的小知识&#39;">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile"></span>
+                        <span class="hidden-mobile">&#39;开发中的小知识&#39;</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -404,8 +409,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/07/22/v-model%E5%9C%A8%20vue2%20%E5%92%8C%20vue3%20%E7%BB%84%E4%BB%B6%E4%B8%8A%E7%9A%84%E5%85%B7%E4%BD%93%E5%8C%BA%E5%88%AB/" title="v-model在 vue2 和 vue3 组件上的具体区别">
-                        <span class="hidden-mobile">v-model在 vue2 和 vue3 组件上的具体区别</span>
+                      <a href="/2025/08/19/call-apply-bind%E5%87%BD%E6%95%B0/" title="&#39;call,apply,bind函数&#39;">
+                        <span class="hidden-mobile">&#39;call,apply,bind函数&#39;</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -617,33 +622,6 @@
   
 
 
-
-
-  
-<script>
-  var relativeDate = function() {
-    var updatedTime = document.getElementById('updated-time');
-    if (updatedTime) {
-      var text = updatedTime.textContent;
-      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
-      var matchs = text.match(reg);
-      if (matchs) {
-        var relativeTime = moment(matchs[0]).fromNow();
-        updatedTime.textContent = text.replace(reg, relativeTime);
-      }
-      updatedTime.style.display = '';
-    }
-  };
-  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
-    if (!'zh-cn'.startsWith('en')) {
-      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
-        relativeDate();
-      });
-    } else {
-      relativeDate();
-    }
-  });
-</script>
 
 
   

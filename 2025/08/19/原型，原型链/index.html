@@ -19,22 +19,23 @@
   <meta name="author" content="zhouwei">
   <meta name="keywords" content="">
   
-    <meta name="description" content="form表单中常见的问题resetField 重置表单1 问题复现：假设现在定义了一下表单数据 12345678910const ruleForm &#x3D; ref&lt;userInfoResult&gt;(&#123;  id: null,  name: &#x27;&#x27;,  gender: null,  employeeNumber: &#x27;&#x27;,  departmentId">
+    <meta name="description" content="new, 原型，原型链1.New的原理当我们使用 new 关键字调用一个函数时，JavaScript 会执行以下步骤：  创建一个新的空对象 obj。将 obj.proto 指向 Foo.prototype，并绑定this。（实例才能通过原型链访问构造函数上挂载的方法和属性）。执行 执行构造函数代码。返回新对象。  new 关键词执行之后总是会返回一个对象，要么是实例对象，要么是 return 语">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue3+element-Plus遇见的问题">
-<meta property="og:url" content="http://example.com/2025/08/10/vue3%E4%B8%AD%E4%BD%BF%E7%94%A8element-Plus%E9%81%87%E8%A7%81%E7%9A%84%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:title" content="&#39;原型，原型链&#39;">
+<meta property="og:url" content="http://example.com/2025/08/19/%E5%8E%9F%E5%9E%8B%EF%BC%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/index.html">
 <meta property="og:site_name" content="lichuyi">
-<meta property="og:description" content="form表单中常见的问题resetField 重置表单1 问题复现：假设现在定义了一下表单数据 12345678910const ruleForm &#x3D; ref&lt;userInfoResult&gt;(&#123;  id: null,  name: &#x27;&#x27;,  gender: null,  employeeNumber: &#x27;&#x27;,  departmentId">
+<meta property="og:description" content="new, 原型，原型链1.New的原理当我们使用 new 关键字调用一个函数时，JavaScript 会执行以下步骤：  创建一个新的空对象 obj。将 obj.proto 指向 Foo.prototype，并绑定this。（实例才能通过原型链访问构造函数上挂载的方法和属性）。执行 执行构造函数代码。返回新对象。  new 关键词执行之后总是会返回一个对象，要么是实例对象，要么是 return 语">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-08-10T10:58:26.000Z">
-<meta property="article:modified_time" content="2025-08-10T11:36:37.764Z">
+<meta property="og:image" content="http://example.com/images/1.png">
+<meta property="article:published_time" content="2025-08-19T13:36:51.000Z">
+<meta property="article:modified_time" content="2025-08-19T13:36:51.000Z">
 <meta property="article:author" content="zhouwei">
-<meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/images/1.png">
   
   
   
-  <title>vue3+element-Plus遇见的问题 - lichuyi</title>
+  <title>&#39;原型，原型链&#39; - lichuyi</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="vue3+element-Plus遇见的问题"></span>
+            <span id="subtitle" data-typed-text="&#39;原型，原型链&#39;"></span>
           
         </div>
 
@@ -211,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-08-10 18:58" pubdate>
-          2025年8月10日 晚上
+        <time datetime="2025-08-19 21:36" pubdate>
+          2025年8月19日 晚上
         </time>
       </span>
     
@@ -224,7 +225,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          198 字
+          658 字
         
       </span>
     
@@ -236,7 +237,7 @@
         
         
           <!-- compatible with older versions-->
-          2 分钟
+          6 分钟
         
       </span>
     
@@ -282,28 +283,44 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">vue3+element-Plus遇见的问题</h1>
-            
-              <p id="updated-time" class="note note-info" style="display: none">
-                
-                  
-                    本文最后更新于 2025-08-10T19:36:37+08:00
-                  
-                  
-
-                
-              </p>
+            <h1 id="seo-header">&#39;原型，原型链&#39;</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="form表单中常见的问题"><a href="#form表单中常见的问题" class="headerlink" title="form表单中常见的问题"></a>form表单中常见的问题</h1><h2 id="resetField-重置表单"><a href="#resetField-重置表单" class="headerlink" title="resetField 重置表单"></a>resetField 重置表单</h2><p>1 问题复现：假设现在定义了一下表单数据</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> ruleForm = ref&lt;userInfoResult&gt;(&#123;<br>  <span class="hljs-attr">id</span>: <span class="hljs-literal">null</span>,<br>  <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;&#x27;</span>,<br>  <span class="hljs-attr">gender</span>: <span class="hljs-literal">null</span>,<br>  <span class="hljs-attr">employeeNumber</span>: <span class="hljs-string">&#x27;&#x27;</span>,<br>  <span class="hljs-attr">departmentId</span>: <span class="hljs-literal">null</span>,<br>  <span class="hljs-attr">permissionLevel</span>: <span class="hljs-literal">null</span>,<br>  <span class="hljs-attr">roles</span>: [],<br>  <span class="hljs-attr">permissions</span>: [],<br>&#125;)<br></code></pre></td></tr></table></figure>
-
-<p>在操作完后使用resetField()方法重置，导致某一项id字段未清除， 往往是因为具体的item项上的prop为绑定，</p>
-<p>请注意，这里有个坑，方法重置的是<strong>初始值</strong>，如果你在onMounted里面设置为表单设置初始值，比如ruleForm.value &#x3D; res， 这时候再使用resetField()数据并不会被重置，因为这时候初始值已经被替换掉了， 应该使用nextick，等DOM更新完毕在设置数据的值，这个时候既可正确清除。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-title function_">nextTick</span>(<span class="hljs-function">() =&gt;</span> &#123;<br>  <span class="hljs-title class_">Object</span>.<span class="hljs-title function_">assign</span>(ruleForm.<span class="hljs-property">value</span>, item)<br>&#125;)<br></code></pre></td></tr></table></figure>
-
+                <h1 id="new-原型，原型链"><a href="#new-原型，原型链" class="headerlink" title="new, 原型，原型链"></a>new, 原型，原型链</h1><h2 id="1-New的原理"><a href="#1-New的原理" class="headerlink" title="1.New的原理"></a>1.New的原理</h2><p>当我们使用 <code>new</code> 关键字调用一个函数时，JavaScript 会执行以下步骤：</p>
+<blockquote>
+<p>创建一个新的空对象 obj。<br>将 obj.<strong>proto</strong> 指向 Foo.prototype，并绑定this。（实例才能通过原型链访问构造函数上挂载的方法和属性）。<br>执行 执行构造函数代码。<br>返回新对象。</p>
+</blockquote>
+<p><code>new 关键词执行之后总是会返回一个对象，要么是实例对象，要么是 return 语句指定的对象</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">function</span> <span class="hljs-title function_">Person</span>(<span class="hljs-params"></span>)&#123;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span> = <span class="hljs-string">&#x27;Jack&#x27;</span>; <br>&#125;<br><span class="hljs-keyword">var</span> p = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Person</span>(); <br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(p)  <span class="hljs-comment">//Person &#123; name: &#x27;Jack&#x27; &#125;</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(p.<span class="hljs-property">name</span>) <span class="hljs-comment">// Jack</span><br>-------------------------------------------------<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">Person</span>(<span class="hljs-params"></span>)&#123;<br>   <span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span> = <span class="hljs-string">&#x27;Jack&#x27;</span>; <br>   <span class="hljs-keyword">return</span> &#123;<span class="hljs-attr">age</span>: <span class="hljs-number">18</span>&#125;<br>&#125;<br><span class="hljs-keyword">var</span> p = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Person</span>(); <br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(p)  <span class="hljs-comment">// &#123;age: 18&#125;</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(p.<span class="hljs-property">name</span>) <span class="hljs-comment">// undefined</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(p.<span class="hljs-property">age</span>) <span class="hljs-comment">// 18</span><br>--------------------------------------------------<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">Person</span>(<span class="hljs-params"></span>)&#123;<br>   <span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span> = <span class="hljs-string">&#x27;Jack&#x27;</span>; <br>   <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;tom&#x27;</span>;<br>&#125;<br><span class="hljs-keyword">var</span> p = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Person</span>(); <br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(p)  <span class="hljs-comment">// &#123;name: &#x27;Jack&#x27;&#125;</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(p.<span class="hljs-property">name</span>) <span class="hljs-comment">// Jack</span><br></code></pre></td></tr></table></figure>
+<h2 id="模拟-new-关键字"><a href="#模拟-new-关键字" class="headerlink" title="模拟 new 关键字"></a>模拟 new 关键字</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs js"><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">Foo</span>(<span class="hljs-params">name</span>) &#123;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span> = name;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">say</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">`Hello, my name is <span class="hljs-subst">$&#123;<span class="hljs-variable language_">this</span>.name&#125;</span>`</span>;<br>    &#125; <br>&#125;<br><span class="hljs-keyword">let</span> obj = &#123;&#125;; <span class="hljs-comment">// 创建一个空对象，然后改变原型指向，并绑定this</span><br><span class="hljs-title class_">Object</span>.<span class="hljs-title function_">setPrototypeOf</span>(obj, <span class="hljs-title class_">Foo</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>);<br><span class="hljs-title class_">Foo</span>.<span class="hljs-title function_">call</span>(obj, <span class="hljs-string">&#x27;张三&#x27;</span>);<br><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(obj.<span class="hljs-property">name</span>);  <span class="hljs-comment">// 张三</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(obj.<span class="hljs-title function_">say</span>());  <span class="hljs-comment">// Hello, my name is 张三</span><br></code></pre></td></tr></table></figure>
+<h2 id="2-原型"><a href="#2-原型" class="headerlink" title="2.原型"></a>2.原型</h2><p>每个函数都有一个 <code>prototype</code> 属性，称之为原型。这个属性的值是个对象，也叫原型对象。作用： 存放一些属性和方法，实例通过原型链可以访问这些方法，从而实现继承和共享行为。这个原型对象上有一个 <code>constructor</code> 属性，指向该函数本身。</p>
+<p><strong>proto</strong> 属性：每个对象都有一个 <code>__proto__</code> 属性，指向创建该对象的构造函数的原型对象（函数本质上也是对象）。</p>
+<h2 id="3-原型链"><a href="#3-原型链" class="headerlink" title="3.原型链"></a>3.原型链</h2><p>这里就先放一张图吧，全面概括了原型链的事<br><img src="/../images/1.png" srcset="/img/loading.gif" lazyload alt="示例图片"></p>
+<p>重要的点 记住就是:每个函数都是 <code>Function</code> 的实例(instanceof Function 为 true), 函数本身的原型链(<strong>proto</strong>)指向 <code>Function.prototype</code>，而 <code>Function.prototype</code> 的原型链指向 <code>Object.prototype</code>。</p>
+<p>实例如何通过原型链访问方法？</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">function</span> <span class="hljs-title function_">Foo</span>(<span class="hljs-params">name</span>) &#123;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span> = name;           <span class="hljs-comment">// 实例属性</span><br>&#125;<br><span class="hljs-title class_">Foo</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">sayHello</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;  <span class="hljs-comment">// 原型方法</span><br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`Hello, my name is <span class="hljs-subst">$&#123;<span class="hljs-variable language_">this</span>.name&#125;</span>`</span>);<br>&#125;;<br><span class="hljs-keyword">const</span> f = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Foo</span>(<span class="hljs-string">&#x27;Alice&#x27;</span>);   <span class="hljs-comment">// 创建实例</span><br>f.<span class="hljs-title function_">sayHello</span>();  <span class="hljs-comment">// Hello, my name is Alice</span><br><br>--------------------------------------<br><span class="hljs-title class_">Object</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">sayHello</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`Hello, my name is <span class="hljs-subst">$&#123;<span class="hljs-variable language_">this</span>.name&#125;</span>`</span>);<br>&#125;;<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">Foo</span>(<span class="hljs-params">name</span>) &#123;<br>  <span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span> = name;<br>&#125;<br><span class="hljs-keyword">const</span> f = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Foo</span>(<span class="hljs-string">&#x27;Alice&#x27;</span>);<br>f.<span class="hljs-title function_">sayHello</span>(); <span class="hljs-comment">// 输出: Hello, my name is Alice</span><br><br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>访问 f.sayHello() 的完整流程<br>查找自身属性 -&gt; 沿原型链查找 -&gt; 调用函数 -&gt; 原型链向上查找（如果没找到）</p>
+</blockquote>
+<p> 这里需要注意的是分清楚！！  需要把上面的图写的滚瓜烂熟即可</p>
+<table>
+<thead>
+<tr>
+<th>对象</th>
+<th>原型链上有哪些？</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Foo (函数对象)</td>
+<td>Foo → Function.prototype → Object.prototype</td>
+</tr>
+<tr>
+<td>f (Foo 的实例)</td>
+<td>f → Foo.prototype → Object.prototype</td>
+</tr>
+</tbody></table>
 
                 
               </div>
@@ -312,34 +329,6 @@
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Vue-element-plus/" class="category-chain-item">Vue element-plus</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/%E5%89%8D%E7%AB%AF/" class="print-no-link">#前端</a>
-      
-    </div>
   
 </div>
 
@@ -349,8 +338,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>vue3+element-Plus遇见的问题</div>
-      <div>http://example.com/2025/08/10/vue3中使用element-Plus遇见的问题/</div>
+      <div>&#39;原型，原型链&#39;</div>
+      <div>http://example.com/2025/08/19/原型，原型链/</div>
     </div>
     <div class="license-meta">
       
@@ -362,7 +351,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年8月10日</div>
+          <div>2025年8月19日</div>
         </div>
       
       
@@ -394,18 +383,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/08/12/Promise/" title="">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile"></span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/07/22/v-model%E5%9C%A8%20vue2%20%E5%92%8C%20vue3%20%E7%BB%84%E4%BB%B6%E4%B8%8A%E7%9A%84%E5%85%B7%E4%BD%93%E5%8C%BA%E5%88%AB/" title="v-model在 vue2 和 vue3 组件上的具体区别">
-                        <span class="hidden-mobile">v-model在 vue2 和 vue3 组件上的具体区别</span>
+                      <a href="/2025/08/19/%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E5%B0%8F%E7%9F%A5%E8%AF%86/" title="&#39;开发中的小知识&#39;">
+                        <span class="hidden-mobile">&#39;开发中的小知识&#39;</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -617,33 +600,6 @@
   
 
 
-
-
-  
-<script>
-  var relativeDate = function() {
-    var updatedTime = document.getElementById('updated-time');
-    if (updatedTime) {
-      var text = updatedTime.textContent;
-      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
-      var matchs = text.match(reg);
-      if (matchs) {
-        var relativeTime = moment(matchs[0]).fromNow();
-        updatedTime.textContent = text.replace(reg, relativeTime);
-      }
-      updatedTime.style.display = '';
-    }
-  };
-  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
-    if (!'zh-cn'.startsWith('en')) {
-      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
-        relativeDate();
-      });
-    } else {
-      relativeDate();
-    }
-  });
-</script>
 
 
   
